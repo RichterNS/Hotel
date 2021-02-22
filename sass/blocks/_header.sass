@@ -2,24 +2,45 @@
   background-color: $light
   &-top
     display: flex
-    justify-content: space-between
+    justify-content: align-items
     align-items: center
     padding: 40px 40px
   &__search
     margin-right: auto
     margin-left: 108px
-  &-menu
+  &-bottom
     background-color: $dark
-    color: $light
+  &-menu
+    list-style: none
     display: flex
     justify-content: space-between
+    padding: 31px 0
+    margin: 0
+    color: $light
+    &__link
+      text-decoration: none
+      color: inherit
+      text-transform: uppercase
+      font-size: 14px
+      line-height: 18px
+    ::after
+      content: ""
+      display: block
+      width: 100%
+      background-color: #ccc
+      height: 1px
+      transform: scale(0)
+      transition: all 0.3s
+    a:hover::after
+      transform: scale(1)
+.logo
+  width: 177px
 .search
   display: flex
   position: relative
   overflow: hidden
   border-radius: 6px
   height: 40px
-
   &__input
     width: 350px
     height: 100%
